@@ -7,9 +7,11 @@
    <% end %>
 
    <li><%= image_tag(current_user.image)%></li>
+   <li><%= link_to "Home", root_path %></li>
    <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-   <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
    <li><%= link_to "Register for the Bar Crawl", new_comment_path %></li>
+   <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+   
  
 
 <% else %>
