@@ -1,17 +1,6 @@
 <h1>Bar Crawl 2015</h1>
 
-<div class="jumbotron center">
-     <h1>Welcome to my app!</h1>
-     <% if user_signed_in? %>
-          Motha fugga you be signed in like a mo fo. GET IT GURL.
-     <% else %>
-       <p>
-         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-       </p>
-  <% end %>  
-</div>
-
+<%= link_to 'New Comment', new_comment_path %>
 <table>
   <thead>
     <tr>
@@ -31,4 +20,3 @@
 
 <br>
 
-<%= link_to 'New Comment', new_comment_path %>
