@@ -1,19 +1,13 @@
 <h1>Bar Crawl 2015</h1>
 
-<%= link_to 'New Comment', new_comment_path %>
+<%= link_to 'Submit Registration', new_comment_path %>
 <table>
-  <thead>
-    <tr>
-      <th>Comment</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.comment %></td>
-        <td><%= comment.user_id %></td>
+        <td><%= comment.user.name %> says</td>
+        <td>"<%= comment.comment %>"</td>
+        <td>on <%= comment.created_at.strftime("%D") %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Comment:</strong>
-  <%= @comment.comment %>
+  <strong>Comment:</strong><br>
+  Comment: <%= @comment.comment %><br>
+  MVP Nomination: <%= @comment.mvp %><br>
+  Bus: <%= @comment.bus %>
 </p>
-
+<a class="venmo-pay-button" data-recipient-id="1168098832941056231" data-amount="52"></a><br>
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>

@@ -1,11 +1,21 @@
 <% if user_signed_in? %>
-   <li>Welcome <%= current_user.email %>! You are signed in with #facebook.</li>
-   <li>Welcome <%= current_user.name %>! You are signed in with #facebook.</li>
-   <li><%= current_user.id %></li>
+	Welcome <%= current_user.name %>! 
+	<% if current_user.provider == nil %>
+	Signed in with facbeook
+   <% else %>
+   	You are signed in with facbeook
+   <% end %>
+
    <li><%= image_tag(current_user.image)%></li>
+   <li><%= link_to "Account Settings", edit_user_registration_path %></li>
    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+   <li><%= link_to "Register for the Bar Crawl", new_comment_path %></li>
+ 
+
 <% else %>
+
     <li><%= link_to "Sign up", new_user_registration_path %></li>
     <li><%= link_to "Sign in", new_user_session_path %></li>
     <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+
 <% end %>
