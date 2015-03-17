@@ -1,14 +1,19 @@
 <h1>Bar Crawl 2015</h1>
 
-<%= link_to 'Submit Registration', new_comment_path %>
+<%= link_to 'Register for the Bar Crawl', new_user_registration_path %>
+
 <table>
   <tbody>
     <% @comments.each do |comment| %>
+    <% if !comment.comment.blank? %>
       <tr>
+        <td><%= image_tag(comment.user.image)%></td>
         <td><%= comment.user.name %> says</td>
         <td>"<%= comment.comment %>"</td>
         <td>on <%= comment.created_at.strftime("%D") %></td>
+        <td>and nominates <%= comment.mvp %> for MVP</td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
