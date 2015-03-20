@@ -41,6 +41,33 @@
   </tbody>
 </table>
 
+<h2>MVP Votin 2g</h2>
+<table>
+  <tbody>
+    <% @votes.each do |vote| %>
+      <tr>
+        <td><%= vote.user.name %></td>
+        <td><%= vote.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>MVP Votin 2g</h2>
+<table>
+  <tbody>
+    <% #Vote.all.each do |vote| %>
+      <% User.where("mvp = 1").each do |user| %>
+      <tr>
+          <td><%= user.name %></td>
+      </tr>
+      <% end %>
+    <% #end %>
+  </tbody>
+</table>
+
+
+
 
 <br>
 
