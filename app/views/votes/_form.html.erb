@@ -11,18 +11,16 @@
     </div>
   <% end %>
 
+  
+<% @users.each do |user| %>
   <div class="field">
-    <%= f.label :mvp_id %><br />
-    <%= f.label :mvp_id, "Yes", :value => 1  %>
-    <%= f.radio_button :mvp_id, 20 %>
-    <%= f.label :mvp_id, "No", :value => 2 %>
-    <%= f.radio_button :mvp_id, 10 %>
+    <%= f.label :mvp_id, user.name %>
+    <%= f.radio_button :mvp_id, user.id %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

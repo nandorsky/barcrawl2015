@@ -28,5 +28,19 @@
   </tbody>
 </table>
 
+<h2>MVP Voting</h2>
+
+<table>
+  <tbody>
+    <% @mvps.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= Vote.where(:mvp_id => user.id).count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 <br>
 

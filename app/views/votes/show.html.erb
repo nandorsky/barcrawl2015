@@ -1,14 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Mvp:</strong>
-  <%= @vote.mvp_id %>
+  <strong>MVP Vote:</strong>
+  <%= User.find(@vote.mvp_id).name %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @vote.user_id %>
-</p>
 
 <%= link_to 'Edit', edit_vote_path(@vote) %> |
 <%= link_to 'Back', votes_path %>

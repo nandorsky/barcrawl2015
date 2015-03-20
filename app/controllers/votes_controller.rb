@@ -14,17 +14,19 @@ class VotesController < ApplicationController
 
   # GET /votes/new
   def new
-    @vote = Vote.new
+    @users = User.where("mvp = 1")
+    @vote = current_user.votes.build
   end
 
   # GET /votes/1/edit
   def edit
+    @users = User.where("mvp = 1")
   end
 
   # POST /votes
   # POST /votes.json
   def create
-    @vote = Vote.new(vote_params)
+    @vote = current_user.votes.build(vote_params)
 
     respond_to do |format|
       if @vote.save
