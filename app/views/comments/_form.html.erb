@@ -39,10 +39,10 @@
                                           <%= f.text_field :bus, :class => "form-control" %>
                                       </div>
 
-                                      <% if current_user.provider = "facebook" %>
+                                      <% if current_user.provider == "facebook" %>
                                       <div class="col_full">
                                           <%= f.label :comment, "Leave a comment for the homepage (optional)" %><br>
-                                          <span>*This comment will be shown on the homepage along with your Facbeook photo.</span>
+                                          <em>This comment will be shown on the homepage along with your Facbeook photo.</em>
                                           <%= f.text_area :comment, :class => "form-control" %>
                                       </div>
                                       <% end %>
