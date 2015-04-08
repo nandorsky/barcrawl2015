@@ -1,67 +1,56 @@
+<!-- Page Title
+    ============================================= -->
+    <section id="page-title">
 
-                            <div class="tab-content clearfix" id="tab-login">
+      <div class="container clearfix">
+        <h1>Log In</h1>
+      </div>
 
-                                <div class="panel panel-default nobottommargin">
-                                  <div class="panel-body" style="padding: 40px;">
+    </section><!-- #page-title end -->
 
-                                    <form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+<!-- Content
+    ============================================= -->
+    <section id="content">
 
-                                      <h3>Login to your Account</h3>
+      <div class="content-wrap">
 
-                                      <div class="col_full">
-                                          <label for="login-form-username">Username:</label>
-                                          <input type="text" id="login-form-username" name="login-form-username" value="" class="form-control" />
-                                      </div>
+        <div class="container clearfix">
 
-                                      <div class="col_full">
-                                          <label for="login-form-password">Password:</label>
-                                          <input type="password" id="login-form-password" name="login-form-password" value="" class="form-control" />
-                                      </div>
 
-                                      <div class="col_full nobottommargin">
-                                          <button class="button button-3d button-black nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
-                                          <a href="#" class="fright">Forgot Password?</a>
-                                      </div>
+            <div class="panel panel-default divcenter noradius" style="max-width: 400px; background-color: rgba(255,255,255,0.93);">
+                            <div class="panel-body" style="padding: 40px;">
 
-                                  </form>
-                                  <div class="line line-sm"></div>
+                                  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class=> 'nobottommargin' }) do |f| %>
+                                    <h3>Login to your Account</h3>
+
+                                    <div class="col_full">
+                                        <%= f.label :email %>
+                                        <%= f.email_field :email, autofocus: true, :class => "form-control not-dark" %>
+                                    </div>
+
+                                    <div class="col_full">
+                                        <%= f.label :password %>
+                                        <%= f.password_field :password, autocomplete: "off", :class => "form-control not-dark" %>
+                                    </div>
+
+                                    <div class="col_full nobottommargin">
+                                        <%= f.submit "Log in", :class => "button button-3d button-black nomargin" %>
+                                        <a href="#" class="fright">Forgot Password?</a>
+                                    </div>
+                                <% end %>
+
+                                <div class="line line-sm"></div>
 
                                 <div class="center">
                                     <h4 style="margin-bottom: 15px;">or Login with:</h4>
-                                    <a href="#" class="button button-rounded si-facebook si-colored">Facebook</a>
-                                    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-                                    <span class="hidden-xs">or</span>
-                                    <a href="#" class="button button-rounded si-twitter si-colored">Twitter</a>
-                                </div>
-
-
-                                  </div>
+                                    <%= link_to "Facebook", user_omniauth_authorize_path(:facebook), :class => "button button-rounded si-facebook si-colored", data: { disable_with: "Logging in..." } %>
                                 </div>
                             </div>
+                        </div>
 
-<h2>Log in</h2>
+            </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    </section><!-- #content end -->

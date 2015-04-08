@@ -22,12 +22,8 @@
                     <nav id="primary-menu">
                     <% if user_signed_in? %>
                         <ul>
-                            <% if current_user.provider = "facebook" %>
-                            <li><%= image_tag(current_user.image)%></li>
-                            <% end %>
                             <li><%= link_to "Home", root_path %></li>
-                            <li><%= link_to "My Account", edit_user_registration_path %></li>
-                            <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+                            <li><%= link_to "My Account", user_path(current_user) %></li>
                            <li> 
                               <% if !Comment.exists?(:user_id => current_user) %>
                                 <%= link_to 'Register', new_comment_path %>
@@ -43,15 +39,12 @@
                             <li><%= link_to "Register", new_user_registration_path %></li>
                             <li><%= link_to "Sign in", new_user_session_path %></li>
                         </ul>
-
                     <% end %>
 
-                         
                     </nav>
                 </div>
              </div>
-
-
+                           
             </header>
 
 
