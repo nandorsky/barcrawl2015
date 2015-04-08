@@ -16,6 +16,7 @@
   <div class="field">
     <%= f.label :mvp_id, user.name %>
     <%= f.radio_button :mvp_id, user.id %>
+    <%= f.hidden_field :vote, :value => 1 %>
   </div>
   <% end %>
 

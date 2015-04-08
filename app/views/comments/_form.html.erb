@@ -1,33 +1,70 @@
-<%= form_for(@comment) do |f| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+<!-- Content
+    ============================================= -->
+    <section id="content">
 
-      <ul>
-      <% @comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+      <div class="content-wrap">
 
-   <div class="field">
-    <%= f.label :bus %><br>
-    <%= f.text_field :bus %>
-  </div>
+        <div class="container clearfix">
 
-  <div class="field">
-    <%= f.label :mvp %><br>
-    <%= f.text_field :mvp %>
-  </div>
+          <div class="tabs divcenter nobottommargin clearfix" id="tab-login-register" style="max-width: 500px;">
 
-  <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_field :comment %>
-  </div>
+                        <div class="tab-container">
+
+                            <div class="tab-content clearfix" id="tab-login">
+                                <div class="panel panel-default nobottommargin">
+                                  <div class="panel-body" style="padding: 40px;">
+
+                                    <%= form_for(@comment) do |f| %>
+                                      <% if @comment.errors.any? %>
+                                        <div id="error_explanation">
+                                          <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+                                          <ul>
+                                          <% @comment.errors.full_messages.each do |message| %>
+                                            <li><%= message %></li>
+                                          <% end %>
+                                          </ul>
+                                        </div>
+                                      <% end %>
+
+                                      <h3>One more quick thing</h3>
+
+                                      <div class="col_full">
+                                          <%= f.label :mvp, "Who would you like to nominate for MVP?" %>
+                                          <%= f.text_field :mvp, :class => "form-control" %>
+                                      </div>
+
+                                      <div class="col_full">
+                                          <%= f.label :bus, "Will you be participating in the bus transportation?" %>
+                                          <%= f.text_field :bus, :class => "form-control" %>
+                                      </div>
+
+                                      <% if current_user.provider = "facebook" %>
+                                      <div class="col_full">
+                                          <%= f.label :comment, "Leave a comment for the homepage (optional)" %><br>
+                                          <span>*This comment will be shown on the homepage along with your Facbeook photo.</span>
+                                          <%= f.text_area :comment, :class => "form-control" %>
+                                      </div>
+                                      <% end %>
+
+                                      <div class="col_full nobottommargin">
+                                          <%= f.submit "Complete Registration", :class => "button button-3d button-black nomargin",  data: { disable_with: "Completing..." } %>
+                                      </div>
+
+                                  <% end %>
+                                  </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- #content end -->
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
