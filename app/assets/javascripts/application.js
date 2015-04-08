@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require plugins
+//= require jquery.calendario
+//= require events-data
+//= require jquery.gmap
 //= require_tree .
