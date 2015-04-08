@@ -1873,6 +1873,7 @@ var SEMICOLON = SEMICOLON || {};
 							query: instaGramTag,
 							max: Number( instaGramCount ),
 							size: 'medium',
+							sortBy: 'most-recent',
 							wrapEachWith: ' '
 						});
 					} else if( instaGramType == 'user' ) {
