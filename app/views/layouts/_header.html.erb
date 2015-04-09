@@ -27,13 +27,6 @@
                             <li><a href="<%= root_path %>#mvp">MVPs</a></li>
                             <li><a href="<%= root_path %>#social">Social</a></li>
                             <li><%= link_to "My Account", current_user %></li>
-                           <li> 
-                              <% if !Comment.exists?(:user_id => current_user) %>
-                                <%= link_to 'Register', new_comment_path %>
-                              <% else %>
-                                
-                              <% end %>
-                            </li>
                             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>                            
                         </ul>
                     <% else %>

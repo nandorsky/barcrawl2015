@@ -18,9 +18,7 @@
 
                 <div class="center topmargin-lg">
 
-                    <a href="#" class="button button-3d button-purple button-rounded button-xlarge">Buy Tickets</a>
-                    <span class="hidden-xs"> - OR - </span>
-                    <a href="#" class="button button-3d button-white button-light button-rounded button-xlarge">Read Details</a>
+                    <a href="<%= root_path %>#intro" class="button button-3d button-purple button-rounded button-xlarge">I WANT IN</a>
 
                 </div>
 
@@ -90,7 +88,7 @@
                             <span>Get ready motha fugga</span>
                         </div>
 
-                        <div id="posts" class="events small-thumbs">
+                        <div id="posts" class="events small-thumbs" data-animate="fadeInRight" data-delay="600">
 
                             <div class="entry clearfix">
                                 <div class="entry-image hidden-sm">
@@ -204,7 +202,7 @@
                         <span>Text here about past mvps.</span>
                     </div>
 
-                    <div class="col_one_fourth nobottommargin">
+                    <div class="col_one_fourth nobottommargin" data-animate="fadeInLeft" data-delay="600">
 
                         <div class="team">
                             <div class="team-image">
@@ -218,7 +216,7 @@
 
                     </div>
 
-                    <div class="col_one_fourth nobottommargin">
+                    <div class="col_one_fourth nobottommargin" data-animate="fadeInLeft" data-delay="500">
 
                         <div class="team">
                             <div class="team-image">
@@ -232,7 +230,7 @@
 
                     </div>
 
-                    <div class="col_one_fourth nobottommargin">
+                    <div class="col_one_fourth nobottommargin" data-animate="fadeInLeft" data-delay="400">
 
                         <div class="team">
                             <div class="team-image">
@@ -246,7 +244,7 @@
 
                     </div>
 
-                    <div class="col_one_fourth nobottommargin col_last">
+                    <div class="col_one_fourth nobottommargin col_last" data-animate="fadeInLeft" data-delay="300">
 
                         <div class="team">
                             <div class="team-image">
@@ -268,8 +266,6 @@
    <!-- MVP END -->
 
 
-
-
 <!-- Social Start -->
 <section id="social">
 
@@ -277,7 +273,7 @@
 
                 <div class="container clearfix">
                     <h3 class="center">What People Are Saying</h3>
-                    <div id="oc-testi" class="owl-carousel testimonials-carousel">
+                    <div id="oc-testi" class="owl-carousel testimonials-carousel" data-animate="fadeInRight" data-delay="300">
 
                         <% @comments.each do |comment| %>
                             <% #if !comment.comment.blank? %>
@@ -327,10 +323,10 @@
 
                 </div>
 
-                <div class="container clearfix" style="margin-top:40px;">
+                <div class="container clearfix" style="margin-top:40px;" data-animate="fadeInLeft" data-delay="500">
 
                     <div class="toggle">
-                           <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i><h3 class="center">Click here to see whos coming</h3></div>
+                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">Click here to see whos coming</h3></div>
                             
                             <div class="togglec">
                                 <% @users.each do |user| %>
@@ -355,7 +351,7 @@
                                 </div>
                             </div>
 
-                            <section id="content">
+                            <section id="content" data-animate="fadeInUp" data-delay="400">
                                 <div class="instagram-photos masonry-thumbs col-6 bottommargin-lg" data-tag="pgtimemachine" data-count="18" data-type="tag" ></div>
                             </section>
              <!-- Instragram Feed End -->
@@ -374,6 +370,7 @@
                     <div class="heading-block center">
                             <h2>Register</h2>
                             <span>Get ready motha fugga</span>
+                            <%= link_to "Register", new_user_registration_path %>
                         </div>
 
 
