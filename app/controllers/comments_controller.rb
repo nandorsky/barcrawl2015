@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully submitted.' }
+        format.html { redirect_to current_user, notice: 'Bam mo fugga! You are registered!' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }

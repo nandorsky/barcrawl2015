@@ -10,7 +10,7 @@
 
                 <script>
                     jQuery(document).ready( function($){
-                        var newDate = new Date(2015, 9, 31);
+                        var newDate = new Date(2015, 4, 9);
                         $('#countdown-ex1').countdown({until: newDate});
                     });
                 </script>
@@ -18,8 +18,6 @@
                 <div class="center topmargin-lg">
 
                     <a href="#" class="button button-3d button-purple button-rounded button-xlarge">Buy Tickets</a>
-                    <span class="hidden-xs"> - OR - </span>
-                    <a href="#" class="button button-3d button-white button-light button-rounded button-xlarge">Read Details</a>
 
                 </div>
 
@@ -40,42 +38,167 @@
            <div class="section parallax nomargin notopborder" style="background: url('aseets/parallax/3.jpg') center center; padding: 100px 0;" data-stellar-background-ratio="0.3">
                     <div class="container-fluid center clearfix">
 
-                        <div class="heading-block">
-                            <h2>Intro stat about bar crwal</h2>
-                            <span data-animate="bounceIn" data-delay="5000">Show off Different Elements with a Different Touch.</span>
-                            <div class="clear"></div>
-                        </div>
-                        
                         <div class="col_one_fourth nobottommargin" data-animate="bounceIn" data-delay="100">
                             <div class="counter counter-large counter-lined"><span data-from="0" data-to="300" data-refresh-interval="1.2" data-speed="200"></span></div>
                             <h5>People Expected</h5>
                         </div>
 
-                        <div class="col_one_fourth nobottommargin" data-animate="bounceIn" data-delay="1000">
+                        <div class="col_one_fourth nobottommargin" data-animate="bounceIn" data-delay="1300">
                             <div class="counter counter-large counter-lined"><span data-from="0" data-to="4" data-refresh-interval="10" data-speed="100"></span></div>
                             <h5>Bars</h5>
                         </div>
 
 
-                        <div class="col_one_fourth nobottommargin" data-animate="bounceIn" data-delay="1500">
+                        <div class="col_one_fourth nobottommargin" data-animate="bounceIn" data-delay="2000">
                             <div class="counter counter-large counter-lined"><span data-from="0" data-to="3" data-refresh-interval="10" data-speed="100"></span></div>
                             <h5>Buses</h5>
                         </div>
 
-                        <div class="col_one_fourth nobottommargin col_last" data-animate="bounceIn" data-delay="2000">
+                        <div class="col_one_fourth nobottommargin col_last" data-animate="bounceIn" data-delay="3000">
                             <div class="counter counter-large counter-lined"><span data-from="0" data-to="1" data-refresh-interval="10" data-speed="100"></span></div>
                             <h5>Day</h5>
                         </div>
 
+                        <div class="heading-block">
+                            <h2 data-animate="fadeInUp" data-delay="3600">Welcome Back</h2>
+                            <span data-animate="fadeInUp" data-delay="4200">
+                                For the fourth consecutive year, the District of Columbia will travel back in time as it plays host to the Post-Grad Time Machine Bar Crawl on Saturday, May 9. For those who have had the pleasure to join us on our past voyages; welcome Home. For those joining us for the very first time, prepare yourself for a 4 bar, 13-hour voyage through local DC watering holes, transporting to each location on some of the world finest school buses.<br><br>The PG Time Machine began as a way for a few George Washington University alums to relive college days in their old college bars. What may have started as a small blackout gathering has grown to nearly 300 degenerates traveling across our nation's capitol on an armada of school buses. Welcome participants not only include GWU alums from DC and around the country, but more importantly - we've been joined by our friends, family, coworkers, and random acquaintances outside of the GW family.
+                            </span>
+                            <div class="clear"></div>
+                        </div>
+
                     </div>
                 </div>
+            </section>
         <!-- PG Time Machine Stats -->
 
-         <!-- User Comments Start -->
+         <!-- Schedule Start -->
+
+            <section id="schedule">
+             <div class="section nomargin noborder bgcolor dark" style="padding: 20px 0;">
+   
+                <div class="container clearfix">
+
+                    <div class="content-wrap" style="padding-top:10px;">
+
+                        <div class="container clearfix">
+
+                                <div class="divider divider-short divider-center"><i class="icon-circle-blank"></i></div>
+
+                                    <div class="heading-block center">
+                                        <h2>Schedule</h2>
+                                        <span>Get ready motha fugga</span>
+                                    </div>
+
+                            <div id="posts" class="events small-thumbs">
+
+
+                            <div class="entry clearfix">
+                                <div class="entry-image hidden-sm">
+                                    <a href="#">
+                                        <%= image_tag("events/thumbs/1.jpg") %>
+                                        
+                                    </a>
+                                </div>
+                                <div class="entry-c">
+                                    <div class="entry-title">
+                                        <h2>The Exchange</h2>
+                                    </div>
+                                    <ul class="entry-meta clearfix">
+                                        <li style="color:white;"><i class="icon-time"></i> 2:00 PM</li>
+                                        <li style="color:white;"><i class="icon-map-marker2"></i> 1719 G St NW, Washington, DC 20006</li>
+                                        <li style="color:white;"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</li>
+                                    </ul>
+                                    <div class="entry-content">
+                                        <p>The voyage begins here. We’ve got solid specials and a big space reserved outside. MVPs may not be won at our first stop, but many have been lost.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="entry clearfix">
+                                <div class="entry-image hidden-sm">
+                                    <a href="#">
+                                        <%= image_tag("events/thumbs/1.jpg") %>
+                                        
+                                    </a>
+                                </div>
+                                <div class="entry-c">
+                                    <div class="entry-title">
+                                        <h2>The Waterfront</h2>
+                                    </div>
+                                    <ul class="entry-meta clearfix">
+                                        <li style="color:white;"><i class="icon-time"></i>5:30 PM</li>
+                                         <li style="color:white;"><i class="icon-map-marker2"></i> Need Address</li>
+                                        <!--<li><a href="#"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</a></li>-->
+                                    </ul>
+                                    <div class="entry-content">
+                                        <p>As you can imagine, reserving a waterfront restaurant is basically impossible, and as we’ve done over the last 3 years, we will invade Nick’s Riverside like the warriors we all are.  Stay until dusk, and then the intensity rises.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="entry clearfix">
+                                <div class="entry-image hidden-sm">
+                                    <a href="#">
+                                        <%= image_tag("events/thumbs/1.jpg") %>
+                                        
+                                    </a>
+                                </div>
+                                <div class="entry-c">
+                                    <div class="entry-title">
+                                        <h2>Mr. Smith's</h2>
+                                    </div>
+                                    <ul class="entry-meta clearfix">
+                                         <li style="color:white;"><i class="icon-time"></i> 7:45 PM</li>
+                                        <li style="color:white;"><i class="icon-map-marker2"></i> Need Address</li>
+                                        <!--<li><a href="#"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</a></li>-->
+                                    </ul>
+                                    <div class="entry-content">
+                                        <p>What used to be Chadwick’s is now Mr. Smith’s, one of the great piano bars in all of America. We’ve booked Jon Adelson who will be taking requests starting at 8pm until we depart. If you don’t think I’ll be dropping $20 for Wagon Wheel, you’re a fool.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="entry clearfix">
+                                <div class="entry-image hidden-sm">
+                                    <a href="#">
+                                        <%= image_tag("others/southern_hosp.jpg") %>
+                                        
+                                    </a>
+                                </div>
+                                <div class="entry-c">
+                                    <div class="entry-title">
+                                        <h2>The Mill</h2>
+                                    </div>
+                                    <ul class="entry-meta clearfix">
+                                        <li style="color:white;"><i class="icon-time"></i> 10:15 PM</li>
+                                        <li style="color:white;"><i class="icon-map-marker2"></i> Need Address</li>
+                                        <!--<li><a href="#"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</a></li>-->
+                                    </ul>
+                                    <div class="entry-content">
+                                        <p>WThe Main Event - While 4 bars in 13 hours seems ambitious, we are one bold group of degenerates. The kind people at Southern Hospitality (formerly known as the Mill) are hooking us up with soon to be announced bar specials. Pace yourselves young warriors. The day is neither a marathon nor a sprint. It’s a sprinting marathon. God Speed.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+        </section>
+            <!-- Schedule End -->
+
+         <!-- Social Start -->
+         <section id="social">
 
             <div class="section">
+
                 <div class="container clearfix">
-                    <h3 class="center">Comments</h3>
+                    <h3 class="center">What People Are Saying</h3>
 
                     <div id="oc-testi" class="owl-carousel testimonials-carousel">
 
@@ -128,14 +251,19 @@
                 </div>
             </div>
 
-            <!--- user Comments End -->
+        <div class="section nobottommargin">
+            <div class="container clearfix">
+                        <h3 class="center">Who's coming...</h3>
+
+            </div>
+        </div>                    
 
 
-        <!-- Instagram Feed Start -->
+         <!-- Instagram Feed Start -->
                 <div class="section nobottommargin">
                     <div class="container clearfix">
                         <div class="heading-block center nobottommargin nobottomborder">
-                            <h3>PGTIMEMACHINE 2015</h3>
+                            <h3 class="center">The gram feed</h3>
                             <span>Use #pgtimemachine to see your photos show up in the feed.</span>
                         </div>
                     </div>
@@ -145,7 +273,17 @@
 
         <!-- Instragram Feed End -->
 
+
+        </section>
+
+            <!--- Social End -->
+
+
+        
+
         <!-- MVP START -->
+
+        <section id="mvp">
         <div class="section">
                 <div class="container clearfix">
 
@@ -165,8 +303,8 @@
                                 <%= image_tag("team/2.jpg") %>
                             </div>
                             <div class="team-desc">
-                                <div class="team-title"><h4>Michael Celone</h4><span>2015</span></div>
-                                <div class="team-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat assumenda similique unde mollitia eum rerum at voluptatibus saepe totam possimus.</div>
+                                <div class="team-title"><h4>Michael Celone, Esq.</h4><span>2015</span></div>
+                                <div class="team-content">Becoming a champion is about peaking at the right time. While his arms were flailing from afternoon to dusk, when the sun set, Celone rose to the mountain top. Literally - the lasting image of the 2014 #PGTimeMachine was young Miguel rising from the masses on the Mill dance floor, shirtless, like a young</div>
                             </div>
                         </div>
 
@@ -180,7 +318,7 @@
                             </div>
                             <div class="team-desc">
                                 <div class="team-title"><h4>Nate Andorsky</h4><span>2014</span></div>
-                                <div class="team-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat assumenda similique unde mollitia eum rerum at voluptatibus saepe totam possimus.</div>
+                                <div class="team-content">No one ever asks to be a hero, but sometimes it just turns out that way. When Nate stepped aboard a crowded school bus and discovered no radio or sound system, he did not fret - he led. From his leadership with the singing on the bus, to ambitious travels throughout the day; by the countless of emails I received in his support as well as the endless amounts of Nate chants from 2pm to 2am, Nate was the clear MVP.</div>
                             </div>
                         </div>
 
@@ -194,7 +332,7 @@
                             </div>
                             <div class="team-desc">
                                 <div class="team-title"><h4>Kevin Hall</h4><span>2013</span></div>
-                                <div class="team-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat assumenda similique unde mollitia eum rerum at voluptatibus saepe totam possimus.</div>
+                                <div class="team-content">In the days of the 5 stop bar crawl, Hall was one of two people to make it to all stops, as well as a few pit stops including GW Deli, George's Falafel, and so on. After an Epic Saturday, Hall had brunch at the Guards, and played a par 3, 9-hole course with no shoes and just an 8 iron – and won.</div>
                             </div>
                         </div>
 
@@ -208,7 +346,7 @@
                             </div>
                             <div class="team-desc">
                                 <div class="team-title"><h4>Poto</h4><span>2012</span></div>
-                                <div class="team-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat assumenda similique unde mollitia eum rerum at voluptatibus saepe totam possimus.</div>
+                                <div class="team-content">While Poto only made it to a few of the stops on the inaugural 2012 Bar Crawl, his actions in that time were truly heroic. As folks left the Waterfront, Michael saw a small child fall into the fountain, and with his cellphone in his pocket and without any hesitation, Michael dove into the fountain and saved said small child. A True American Hero.</div>
                             </div>
                         </div>
 
@@ -218,119 +356,11 @@
 
                 </div>
             </div>
+        </mvp>
             <!-- MVP END -->
 
 
-            <!-- Schedule Start -->
-                <div class="container clearfix">
+           
 
-                    <div class="postcontent nobottommargin">
-                        <div class="fancy-title title-border">
-                            <h3>Schedule</h3>
-                        </div>
+           
 
-                        <div id="posts" class="events small-thumbs">
-
-                            <div class="entry clearfix">
-                                <div class="entry-image hidden-sm">
-                                    <a href="#">
-                                        <%= image_tag("events/thumbs/1.jpg") %>
-                                        <div class="entry-date">10<span>Apr</span></div>
-                                    </a>
-                                </div>
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h2>Bar Name</h2>
-                                    </div>
-                                    <ul class="entry-meta clearfix">
-                                        <li><a href="#"><i class="icon-time"></i> 11:00 - 19:00</a></li>
-                                        <li><a href="#"><i class="icon-map-marker2"></i> Location</a></li>
-                                    </ul>
- 
-                                </div>
-                            </div>
-
-                            <div class="entry clearfix">
-                                <div class="entry-image hidden-sm">
-                                    <a href="#">
-                                        <%= image_tag("events/thumbs/1.jpg") %>
-                                        <div class="entry-date">10<span>Apr</span></div>
-                                    </a>
-                                </div>
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h2>Bar Name</h2>
-                                    </div>
-                                    <ul class="entry-meta clearfix">
-                                        <li><a href="#"><i class="icon-time"></i> 11:00 - 19:00</a></li>
-                                        <li><a href="#"><i class="icon-map-marker2"></i> Location</a></li>
-                                    </ul>
- 
-                                </div>
-                            </div>
-
-                            <div class="entry clearfix">
-                                <div class="entry-image hidden-sm">
-                                    <a href="#">
-                                        <%= image_tag("events/thumbs/1.jpg") %>
-                                        <div class="entry-date">10<span>Apr</span></div>
-                                    </a>
-                                </div>
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h2>Bar Name</h2>
-                                    </div>
-                                    <ul class="entry-meta clearfix">
-                                        <li><a href="#"><i class="icon-time"></i> 11:00 - 19:00</a></li>
-                                        <li><a href="#"><i class="icon-map-marker2"></i> Location</a></li>
-                                    </ul>
- 
-                                </div>
-                            </div>
-
-                            <div class="entry clearfix">
-                                <div class="entry-image hidden-sm">
-                                    <a href="#">
-                                        <%= image_tag("events/thumbs/1.jpg") %>
-                                        <div class="entry-date">10<span>Apr</span></div>
-                                    </a>
-                                </div>
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <h2>Bar Name</h2>
-                                    </div>
-                                    <ul class="entry-meta clearfix">
-                                        <li><a href="#"><i class="icon-time"></i> 11:00 - 19:00</a></li>
-                                        <li><a href="#"><i class="icon-map-marker2"></i> Location</a></li>
-                                    </ul>
- 
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="sidebar nobottommargin col_last clearfix">
-                        <div class="sidebar-widgets-wrap">
-
-
-                                <!-- Instagram Feed Start -->
-
-
-                                <div class="instagram-photos masonry-thumbs col-2 bottommargin-lg" data-tag="pgtimemachine" data-count="24" data-type="tag" style="margin-top:40px;"></div>
-
-        <!-- Instragram Feed End -->
-
-
-                        </div>
-                    </div>
-
-                </div>
-
-            <!-- Schedule End -->
-
-
-
-
-        </section>

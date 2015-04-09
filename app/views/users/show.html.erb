@@ -7,21 +7,84 @@
       </div>
 
     </section><!-- #page-title end -->
-<%= current_user.id %>
 
-<%= link_to 'Go Back To Homepage', root_path %> 
 
-<%= current_user.name %>
-<%= current_user.id %>
-<%= current_user.email %>
+ <section id="content">
 
-<p id="notice"><%= notice %></p>
+            <div class="content-wrap">
 
-<p>
-  <strong>Registration Summary:</strong><br>
-  
 
-</p>
-Click below to Pay Kevin Meehan<br>
+          <% flash.each do |name, msg| %>
+            <div class="container clearfix">
+              <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong><%= content_tag(:div, msg) %></strong> 
+                <% if @comment.bus == "Yes" %>
+                Since you will be riding the bus, to pay via venmo <a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank">click here</a>.
+                <% end %>
+              </div>
+            </div>
+            <% end %>
+
+                <div class="container clearfix">
+                  <div class="heading-block title-center nobottomborder">
+                    <h2>2015 PG Time Machine Countdown</h2>
+                </div>
+
+                  <div id="countdown-ex1" class="countdown countdown-large coming-soon divcenter bottommargin" style="max-width:700px;"></div>
+
+                <script>
+                    jQuery(document).ready( function($){
+                        var newDate = new Date(2015, 4, 9);
+                        $('#countdown-ex1').countdown({until: newDate});
+                    });
+                </script>
+
+                  <%= link_to 'Go Back To Homepage', root_path, :class => "btn btn-success" %> 
+
+                    <!-- Post Content
+                    ============================================= -->
+                    <div class="postcontent nobottommargin clearfix">
+                    	
+                    	<div class="table-responsive">
+                            <div class="table-responsive">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <td>Name</td>
+                                <td><%= current_user.name %></td>
+                              </tr>
+                             <tr>
+                                <td>Email</td>
+                                <td><%= current_user.email %></td>
+                              </tr>
+                              <tr>
+                                <td>MVP Nomiation</td>
+                                <td><%= @comment.mvp %></td>
+                              </tr>
+                              <tr>
+                                <td>Bus</td>
+                                <td><%= @comment.bus %><br><a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank" />PAY BY VENMO NOW</a></td>
+                              </tr>
+                          <% if current_user.provider == "facebook" %>    
+                              <tr>
+                                <td>Comment for the homepage</td>
+                                <td><div class="testi-content"><p><%= @comment.comment %></p></div></td>
+                              </tr>
+                          <% end %>
+                            </tbody>
+                          </table>
+                        </div>
+
+                          </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+  </section>
 
 
