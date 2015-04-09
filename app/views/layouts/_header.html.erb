@@ -23,9 +23,9 @@
                     <% if user_signed_in? %>
                         <ul>
                             <li><%= link_to "Home", root_path %></li>
-                            <li><a href="#schedule">Schedule</a></li>
-                            <li><a href="#mvp">MVPs</a></li>
-                            <li><a href="#social">Social</a></li>
+                            <li><a href="<%= root_path %>#schedule">Schedule</a></li>
+                            <li><a href="<%= root_path %>#mvp">MVPs</a></li>
+                            <li><a href="<%= root_path %>#social">Social</a></li>
                             <li><%= link_to "My Account", current_user %></li>
                            <li> 
                               <% if !Comment.exists?(:user_id => current_user) %>
@@ -39,9 +39,9 @@
                     <% else %>
                           <ul>
                             <li><%= link_to "Home", root_path %></li>
-                            <li><a href="#schedule">Schedule</a></li>
-                            <li><a href="#mvp">MVPs</a></li>
-                            <li><a href="#social">Social</a></li>
+                            <li><a href="<%= root_path %>#schedule">Schedule</a></li>
+                            <li><a href="<%= root_path %>#mvp">MVPs</a></li>
+                            <li><a href="<%= root_path %>#social">Social</a></li>
                             <li><%= link_to "Register", new_user_registration_path %></li>
                             <li><%= link_to "Sign in", new_user_session_path %></li>
                         </ul>

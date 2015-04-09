@@ -189,6 +189,86 @@
 
 <!-- Schedule End -->
 
+<!-- MVP START -->
+
+    <section id="mvp">
+        <div class="section">
+                <div class="container clearfix">
+
+                    <div class="clear"></div>
+
+                    <div class="divider divider-short divider-center"><i class="icon-circle-blank"></i></div>
+
+                    <div class="heading-block center">
+                        <h2>PAST MVPS</h2>
+                        <span>Text here about past mvps.</span>
+                    </div>
+
+                    <div class="col_one_fourth nobottommargin">
+
+                        <div class="team">
+                            <div class="team-image">
+                                <%= image_tag("others/celone.jpg") %>
+                            </div>
+                            <div class="team-desc">
+                                <div class="team-title"><h4>Michael Celone, Esq.</h4><span>2015</span></div>
+                                <div class="team-content">Becoming a champion is about peaking at the right time. While his arms were flailing from afternoon to dusk, when the sun set, Celone rose to the mountain top. Literally - the lasting image of the 2014 #PGTimeMachine was young Miguel rising from the masses on the Mill dance floor, shirtless, like a young</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col_one_fourth nobottommargin">
+
+                        <div class="team">
+                            <div class="team-image">
+                                <%= image_tag("team/2.jpg") %>
+                            </div>
+                            <div class="team-desc">
+                                <div class="team-title"><h4>Nate Andorsky</h4><span>2014</span></div>
+                                <div class="team-content">No one ever asks to be a hero, but sometimes it just turns out that way. When Nate stepped aboard a crowded school bus and discovered no radio or sound system, he did not fret - he led. From his leadership with the singing on the bus, to ambitious travels throughout the day; by the countless of emails I received in his support as well as the endless amounts of Nate chants from 2pm to 2am, Nate was the clear MVP.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col_one_fourth nobottommargin">
+
+                        <div class="team">
+                            <div class="team-image">
+                                <%= image_tag("team/2.jpg") %>
+                            </div>
+                            <div class="team-desc">
+                                <div class="team-title"><h4>Kevin Hall</h4><span>2013</span></div>
+                                <div class="team-content">In the days of the 5 stop bar crawl, Hall was one of two people to make it to all stops, as well as a few pit stops including GW Deli, George's Falafel, and so on. After an Epic Saturday, Hall had brunch at the Guards, and played a par 3, 9-hole course with no shoes and just an 8 iron – and won.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col_one_fourth nobottommargin col_last">
+
+                        <div class="team">
+                            <div class="team-image">
+                                <%= image_tag("team/2.jpg") %>
+                            </div>
+                            <div class="team-desc">
+                                <div class="team-title"><h4>Poto</h4><span>2012</span></div>
+                                <div class="team-content">While Poto only made it to a few of the stops on the inaugural 2012 Bar Crawl, his actions in that time were truly heroic. As folks left the Waterfront, Michael saw a small child fall into the fountain, and with his cellphone in his pocket and without any hesitation, Michael dove into the fountain and saved said small child. A True American Hero.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            </div>
+        </section>
+   <!-- MVP END -->
+
+
+
 
 <!-- Social Start -->
 <section id="social">
@@ -250,10 +330,16 @@
                 <div class="container clearfix" style="margin-top:40px;">
 
                     <div class="toggle">
-                           <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i><h3 class="center">Who be coming</h3></div>
+                           <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i><h3 class="center">Click here to see whos coming</h3></div>
                             
                             <div class="togglec">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.
+                                <% @users.each do |user| %>
+                                    <% #if !comment.comment.blank? %>
+                                            <%= image_tag(user.image)%>
+                                        
+                                    <% #end %>
+                                <% end %>
+
                             </div>
                         </div>
 
@@ -276,6 +362,8 @@
 </section>
 
 <!-- Social End -->
+
+ 
 
 <!-- Register Start -->
 
