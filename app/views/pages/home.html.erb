@@ -11,14 +11,14 @@
 
                 <script>
                     jQuery(document).ready( function($){
-                        var newDate = new Date(2015, 9, 31);
+                        var newDate = new Date(2015, 4, 9);
                         $('#countdown-ex1').countdown({until: newDate});
                     });
                 </script>
 
                 <div class="center topmargin-lg">
 
-                    <a href="<%= root_path %>#intro" class="button button-3d button-blue button-rounded button-xlarge">I WANT IN</a>
+                    <a href="<%= root_path %>#intro" class="button button-desc button-3d button-rounded button-green center button-xlarge">I WANT IN</a>
 
                 </div>
 
@@ -275,7 +275,7 @@
                 <div class="container clearfix">
                     <div class="heading-block center">
                         <h2>Social</h2>
-                        <span>Stuff here about Social.</span>
+                        <span>Stuff here about social.</span>
                     </div>
                     <div id="oc-testi" class="owl-carousel testimonials-carousel">
 
@@ -290,8 +290,7 @@
                                         <div class="testi-content">
                                             <p><%= comment.comment %></p>
                                             <div class="testi-meta">
-                                                <%= comment.user.name %>
-                                                <span><%= comment.created_at.strftime("%D") %></span>
+                                                <span style="font-size:10px;"><%= comment.user.name %><br><%= comment.created_at.strftime("%b %d at %l:%M %p") %></span>
                                             </div>
                                         </div>
                                     </div>
@@ -331,12 +330,12 @@
                 <div class="container clearfix" style="margin-top:40px;" >
 
                     <div class="toggle">
-                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">Click here to see whos coming</h3></div>
+                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">Click here to see who is coming</h3></div>
                             
                             <div class="togglec">
                                 <% @users.each do |user| %>
                                     <% if user.provider == "facebook" %>
-                                            <div class="testi-image"><%= image_tag(user.image) %></div>
+                                            <div class="testi-image"><a href="#" data-toggle="tooltip" data-placement="top" data-original-title="<%= user.name %>"><%= image_tag(user.image) %></a></div>
                                     <% end %>
                                 <% end %>
 
