@@ -280,6 +280,7 @@
                     <div id="oc-testi" class="owl-carousel testimonials-carousel">
 
                         <% @comments.each do |comment| %>
+                        <% if comment.user.provider == "facebook" %>
                             <% #if !comment.comment.blank? %>
                                 <div class="oc-item">
                                     <div class="testimonial">
@@ -295,7 +296,7 @@
                                         </div>
                                     </div>
                                 </div>
-                             <% #end %>
+                             <% end %>
                         <% end %>
 
                     </div>
@@ -334,10 +335,9 @@
                             
                             <div class="togglec">
                                 <% @users.each do |user| %>
-                                    <% #if !comment.comment.blank? %>
-                                            <div data-animate="fadeIn" data-delay="100"><%= image_tag(user.image) %></div>
-                                        
-                                    <% #end %>
+                                    <% if user.provider == "facebook" %>
+                                            <div class="testi-image"><%= image_tag(user.image) %></div>
+                                    <% end %>
                                 <% end %>
 
                             </div>
