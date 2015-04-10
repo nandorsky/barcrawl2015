@@ -280,7 +280,7 @@
                     <div id="oc-testi" class="owl-carousel testimonials-carousel">
 
                         <% @comments.each do |comment| %>
-                        <% if comment.user.provider == "facebook" %>
+                        <% if !comment.comment.blank? %>
                             <% #if !comment.comment.blank? %>
                                 <div class="oc-item">
                                     <div class="testimonial">
