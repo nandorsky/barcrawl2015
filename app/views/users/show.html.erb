@@ -86,4 +86,43 @@
 
   </section>
 
+<% if current_user.mvp = 2 %>
+        <section id="content">
 
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <!-- Post Content
+                    ============================================= -->
+                    <div class="postcontent nobottommargin clearfix">
+
+                        <h4>Registrations</h4>
+
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Email</th>
+                              <th>Bus</th>
+  
+                            </tr>
+                          </thead>
+                          <tbody>
+                          <% @registrations.each do |user| %>
+                                  <tr>
+                                    <td><%= user.name %></td>
+                                    <td><%= user.email %></td>
+                                    <td><%= user.id %></td>
+                                    <td><%#= Comment.find_by_user_id(user.id) %></td>
+                                  </tr>
+                            <% end %>
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+<% end %>
