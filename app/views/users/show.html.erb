@@ -106,6 +106,7 @@
                               <th>Name</th>
                               <th>Email</th>
                               <th>Bus</th>
+                              <th>MVP</th>
   
                             </tr>
                           </thead>
@@ -115,8 +116,8 @@
                                     <td><%= user.created_at.strftime("%b %d at %l:%M %p") %></td>
                                     <td><%= user.name %></td>
                                     <td><%= user.email %></td>
-                                    <td><%= user.id %></td>
-                                    <td><%#= Comment.find_by_user_id(user.id) %></td>
+                                    <td><%= Comment.find_by(:user_id => user).try(:bus) %></td>
+                                    <td><%= Comment.find_by(:user_id => user).try(:mvp) %></td>
                                   </tr>
                             <% end %>
                           </tbody>
