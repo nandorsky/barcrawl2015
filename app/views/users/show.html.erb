@@ -111,7 +111,7 @@
                               <th>Name</th>
                               <th width="80px;">Email</th>
                               <th>Bus</th>
-                              <th width="80px;">Paid</th>
+                              <th width="80px;">Payment</th>
                               <th>MVP</th>
                               <th>Comment</th>
 
@@ -136,7 +136,7 @@
                                     
                                     <td><label class="label label-default">N-A</label></td>
                                     
-                                    <% end %><%= Comment.find_by(:user_id => user).try(:payment) %>
+                                    <% end %>
                                     
                                     <td><%= Comment.find_by(:user_id => user).try(:mvp) %></td>
                                     <td><%= Comment.find_by(:user_id => user).try(:comment) %></td>

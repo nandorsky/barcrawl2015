@@ -29,7 +29,7 @@
                                       <% end %>
 
                                       <h3>Payment for <%= @comment.user.name %></h3>
-                                      <h3><%= @comment.payment %></h3>
+                                      <h3>Payment Stauts: <%= @comment.payment %></h3>
 
                                       <div class="col_full">
                                           <%= f.check_box :payment, {:class => "form-contorl"}, "Paid", "Not Paid" %>
