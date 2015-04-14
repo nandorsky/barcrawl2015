@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @registrations = User.all
+    @registrations = User.all.order("id DESC")
     @comment = Comment.find_by(:user_id => current_user)
 
     respond_to do |format|

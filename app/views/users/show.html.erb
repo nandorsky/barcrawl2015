@@ -102,6 +102,7 @@
                         <table class="table table-striped">
                           <thead>
                             <tr>
+                              <th>Date</th>
                               <th>Name</th>
                               <th>Email</th>
                               <th>Bus</th>
@@ -111,6 +112,7 @@
                           <tbody>
                           <% @registrations.each do |user| %>
                                   <tr>
+                                    <td><%= user.created_at.strftime("%b %d at %l:%M %p") %></td>
                                     <td><%= user.name %></td>
                                     <td><%= user.email %></td>
                                     <td><%= user.id %></td>
