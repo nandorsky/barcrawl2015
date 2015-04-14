@@ -9994,7 +9994,7 @@ body:not(.device-touch) .rounded-skill {
 .owl-carousel.owl-loading {
 	display:block;
 	min-height: 100px;
-	background: url('images/preloader.gif') no-repeat center center
+	background: url("/assets/preloader.gif") no-repeat center center
 }
 
 .owl-carousel.owl-hidden { opacity:0 }
