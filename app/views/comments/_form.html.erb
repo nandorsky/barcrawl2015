@@ -45,7 +45,7 @@
 
                                       <div class="col_full">
                                           <%= f.label :bus, "Will you be participating in the bus transportation?" %>
-                                          <%= f.select :bus, options_for_select([["Yes","Yes"],["No","Yes"]],''), :class => "form-control" %>
+                                          <%= f.select :bus, options_for_select([["Yes","Yes"],["No","No"]],''), :class => "form-control" %>
                                       </div>
 
                                       <% if current_user.provider == "facebook" %>
