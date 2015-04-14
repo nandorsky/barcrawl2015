@@ -19,6 +19,7 @@
               <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <strong><%= content_tag(:div, msg) %></strong> 
+                
                 <% if @comment.bus == "Yes" %>
                 Since you will be riding the bus, to pay via venmo <a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank">click here</a>.
                 <% end %>
@@ -91,7 +92,7 @@
 
   </section>
 
-<% if current_user.mvp == 2 %>
+<% if !current_user.mvp == 2 %>
         <section id="content">
 
             <div class="content-wrap">
@@ -110,6 +111,7 @@
                               <th>Name</th>
                               <th>Email</th>
                               <th>Bus</th>
+                              <th>Paid</th>
                               <th>MVP</th>
                               <th>Comment</th>
 
@@ -122,6 +124,20 @@
                                     <td><%= user.name %></td>
                                     <td><%= user.email %></td>
                                     <td><%= Comment.find_by(:user_id => user).try(:bus) %></td>
+                                    <% if Comment.find_by(:user_id => user).try(:bus) == "Yes" %>
+
+                                        <% if Comment.find_by(:user_id => user).try(:payment) == "Paid" %>
+                                        <td><label class="label label-success">Yes</label><a href="<%= edit_comment_path(Comment.find_by(:user_id => user)) %>">  <i class="icon-pencil2"></i></a></td>
+                                        <% else %>
+                                        <td><label class="label label-danger">No</label><a href="<%= edit_comment_path(Comment.find_by(:user_id => user)) %>">  <i class="icon-pencil2"></i></a></td>
+                                        <% end %>
+                                    
+                                    <% else %>
+                                    
+                                    <td><label class="label label-default">N-A</label></td>
+                                    
+                                    <% end %><%= Comment.find_by(:user_id => user).try(:payment) %>
+                                    
                                     <td><%= Comment.find_by(:user_id => user).try(:mvp) %></td>
                                     <td><%= Comment.find_by(:user_id => user).try(:comment) %></td>
                                   </tr>

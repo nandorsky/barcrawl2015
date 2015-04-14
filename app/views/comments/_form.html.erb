@@ -7,13 +7,14 @@
 
         <div class="container clearfix">
 
-          <% if Comment.exists?(:user_id => current_user.id) %>
+          <% if Comment.exists?(:user_id => current_user.id) && current_user.mvp == 2 %>
   
                   <h3>You are already registered for #pgtimemachine. What would you like to do now?</h3>
                   <h2><%= link_to "Go to the homepage", root_path %></h2>
                   <h2><%= link_to "Go to my account", current_user %></h2>
                   <h2><a href="http://www.youtuberandomvideo.com/" target="_blank">Watch a random YouTube video<a/></h2>
               <% else %>
+
 
           <div class="tabs divcenter nobottommargin clearfix" id="tab-login-register" style="max-width: 500px;">
                 
@@ -41,6 +42,7 @@
                                       <div class="col_full">
                                           <%= f.label :mvp, "Who would you like to nominate for MVP?" %>
                                           <%= f.text_field :mvp, :class => "form-control", :placeholder => "EX: Nate Andorsky (Big Boss)" %>
+                                          <%= f.hidden_field :payment, :value => "Not Paid" %>
                                       </div>
 
                                       <div class="col_full">

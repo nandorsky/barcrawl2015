@@ -43,7 +43,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Registration was successfully updated.' }
+        format.html { redirect_to current_user, notice: 'Successfully Updated Dud!' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
@@ -70,6 +70,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:comment, :bus, :mvp)
+      params.require(:comment).permit(:comment, :bus, :mvp, :payment)
     end
 end
