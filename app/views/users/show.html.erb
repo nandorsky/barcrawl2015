@@ -112,7 +112,8 @@
                               <th>Email</th>
                               <th>Bus</th>
                               <th>MVP</th>
-  
+                              <th>Comment</th>
+
                             </tr>
                           </thead>
                           <tbody>
@@ -123,6 +124,7 @@
                                     <td><%= user.email %></td>
                                     <td><%= Comment.find_by(:user_id => user).try(:bus) %></td>
                                     <td><%= Comment.find_by(:user_id => user).try(:mvp) %></td>
+                                    <td><%= Comment.find_by(:user_id => user).try(:comment) %></td>
                                   </tr>
                             <% end %>
                           </tbody>
