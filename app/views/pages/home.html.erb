@@ -1,13 +1,13 @@
 <!-- Parallax Start -->
- <section id="slider" class="slider-parallax full-screen dark" style="overflow: hidden; background: url('<%= asset_path 'parallax/home1.jpg' %>') no-repeat center center;background-size: cover; ">
+   <section id="slider" class="full-screen dark" style="overflow: hidden; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<%= asset_path 'parallax/home1.jpg' %>') no-repeat center center ;background-size: cover; ">
 
             <div class="container clearfix vertical-middle" style="z-index: 3;">
 
                 <div class="heading-block title-center nobottomborder">
-                    <h1 style="font-size:88px; color:white;" >2015 PG Time Machine</h1>
+                    <h1 style="font-size:88px; color:white;" data-animate="fadeInDown" data-delay="600" >2015 PG Time Machine</h1>
                 </div>
 
-                <div id="countdown-ex1" class="countdown countdown-large coming-soon divcenter bottommargin" style="max-width:700px; color:white;"></div>
+                <div id="countdown-ex1" class="countdown countdown-large coming-soon divcenter bottommargin" style="max-width:700px; color:white;" data-animate="fadeInDown" data-delay="2000"></div>
 
                 <script>
                     jQuery(document).ready( function($){
@@ -18,12 +18,11 @@
 
                 <div class="center topmargin-lg">
 
-                    <a href="<%= root_path %>#intro" class="button button-desc button-3d button-rounded button-green center button-xlarge">I WANT IN</a>
+                    <a href="<%= root_path %>#intro" class="button button-desc button-3d button-rounded button-green center button-xlarge" data-animate="fadeInDown" data-delay="2200">I WANT IN</a>
 
                 </div>
 
             </div>
-
     </section>
 <!-- Parallax End -->
 
@@ -31,7 +30,7 @@
 
     <section id="intro">
 
-            <div class="content-wrap" style="padding-bottom:0px;">
+            <div class="content-wrap" style="padding-bottom:0px; background-color: #F9F9F9;">
 
 
             <div class="section nomargin notopborder"> 
@@ -77,12 +76,10 @@
 <!-- Intro End -->
 
 
-
-
 <!-- Schedule Start -->
 
     <section id="schedule">
-        <div class="section nomargin noborder bgcolor dark" style="padding-bottom:0px; background-color: #7E8F7C !important;">
+        <div class="section nomargin noborder bgcolor dark" style="padding-bottom:0px; background-color: #558C89!important;">
             <div class="container clearfix">
                 <div class="content-wrap" style="padding-top:10px; ">
                     <div class="divider divider-short divider-center"><i class="icon-circle-blank"></i></div>
@@ -105,7 +102,7 @@
                                         <h2>Dunya</h2>
                                     </div>
                                     <ul class="entry-meta clearfix">
-                                        <li style="color:white;"><i class="icon-time"></i> 10:00 PM</li>
+                                        <li style="color:white;"><i class="icon-time"></i>Friday at 10:00 PM</li>
                                         <li style="color:white;"><i class="icon-map-marker2"></i> 801 Florida Ave NW, Washington, DC 20006</li>
                                         <!--<li style="color:white;"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</li>-->
                                     </ul>
@@ -128,7 +125,7 @@
                                         <h2>The Exchange</h2>
                                     </div>
                                     <ul class="entry-meta clearfix">
-                                        <li style="color:white;"><i class="icon-time"></i> 2:00 PM</li>
+                                        <li style="color:white;"><i class="icon-time"></i>Saturday at 2:00 PM</li>
                                         <li style="color:white;"><i class="icon-map-marker2"></i> 1719 G St NW, Washington, DC 20006</li>
                                         <li style="color:white;"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</li>
                                     </ul>
@@ -150,7 +147,7 @@
                                         <h2>The Waterfront</h2>
                                     </div>
                                     <ul class="entry-meta clearfix">
-                                        <li style="color:white;"><i class="icon-time"></i>5:30 PM</li>
+                                        <li style="color:white;"><i class="icon-time"></i>Saturday at 5:30 PM</li>
                                          <li style="color:white;"><i class="icon-map-marker2"></i>3050 K St NW, Washington, DC 20007</li>
                                         <!--<li><a href="#"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</a></li>-->
                                     </ul>
@@ -172,7 +169,7 @@
                                         <h2>Mr. Smith's</h2>
                                     </div>
                                     <ul class="entry-meta clearfix">
-                                         <li style="color:white;"><i class="icon-time"></i> 7:45 PM</li>
+                                         <li style="color:white;"><i class="icon-time"></i>Saturday at 7:45 PM</li>
                                         <li style="color:white;"><i class="icon-map-marker2"></i>3205 K Street NW, Washington, DC 20007</li>
                                         <!--<li><a href="#"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</a></li>-->
                                     </ul>
@@ -213,10 +210,88 @@
 
 <!-- Schedule End -->
 
+
+<!-- Social Start -->
+<section id="social" style="margin:0px;">
+
+        <div class="section" style="background-color:white;">
+            <div class="container clearfix" style="margin-bottom:40px;" >
+
+                    <div class="toggle">
+                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">CLICK TO SEE WHO IS COMING</h3></div>
+                            
+                            <div class="togglec">
+                                <% @users.each do |user| %>
+                                    <% if user.provider == "facebook" %>
+                                            <div class="testi-image"><a href="#" data-toggle="tooltip" data-placement="top" data-original-title="<%= user.name %>"><%= image_tag(user.image) %></a></div>
+                                    <% end %>
+                                <% end %>
+
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="container clearfix">
+                    <div id="oc-testi" class="owl-carousel testimonials-carousel">
+
+                        <% @comments.each do |comment| %>
+                        <% if !comment.comment.blank? %>
+                            <% #if !comment.comment.blank? %>
+                                <div class="oc-item">
+                                    <div class="testimonial">
+                                        <div class="testi-image">
+                                            <%= image_tag(comment.user.image)%>
+                                        </div>
+                                        <div class="testi-content">
+                                            <p><%= comment.comment %></p>
+                                            <div class="testi-meta">
+                                                <span style="font-size:12px;"><%= comment.user.name %><br><%= comment.created_at.strftime("%b %d at %l:%M %p") %></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             <% end %>
+                        <% end %>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        jQuery(document).ready(function($) {
+
+                            var ocTesti = $("#oc-testi");
+
+                            ocTesti.owlCarousel({
+                                margin: 10,
+                                autoplay: true,
+                                loop: true,
+                                nav: true,
+                                autoplayHoverPause: false,
+                                navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
+                                dots: true,
+                                responsive:{
+                                    0:{ items:1 },
+                                    768:{ items:2 },
+                                    992:{ items:3 }
+                                }
+                            });
+
+                        });
+
+                    </script>
+
+                </div>
+
+            </div>
+</section>
+
+<!-- Social End -->
+
 <!-- MVP START -->
 
     <section id="mvp" >
-        <div class="section" style="margin-top:0px; background-color:white!important;">
+        <div class="section" style="margin:0px; background-color:#DFE2DB!important;">
                 <div class="container clearfix">
 
                     <div class="clear"></div>
@@ -291,86 +366,35 @@
         </section>
    <!-- MVP END -->
 
+ 
 
-<!-- Social Start -->
-<section id="social" style="margin:0px;">
-
-            <div class="section">
-
-                <div class="container clearfix">
+<!-- Register Start -->
+<% if !user_signed_in? %>
+    <section id="register">
+        <div class="section nomargin noborder bgcolor dark" style="padding: 20px 0px; background-color:#74AFAD!important;">
+            <div class="container clearfix">
+                <div class="content-wrap" style="padding-top:10px;">
                     <div class="heading-block center">
-                        <h2>Social</h2>
-                        <span></span>
-                    </div>
-                    <div id="oc-testi" class="owl-carousel testimonials-carousel">
-
-                        <% @comments.each do |comment| %>
-                        <% if !comment.comment.blank? %>
-                            <% #if !comment.comment.blank? %>
-                                <div class="oc-item">
-                                    <div class="testimonial">
-                                        <div class="testi-image">
-                                            <%= image_tag(comment.user.image)%>
-                                        </div>
-                                        <div class="testi-content">
-                                            <p><%= comment.comment %></p>
-                                            <div class="testi-meta">
-                                                <span style="font-size:12px;"><%= comment.user.name %><br><%= comment.created_at.strftime("%b %d at %l:%M %p") %></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                             <% end %>
-                        <% end %>
-
-                    </div>
-
-                    <script type="text/javascript">
-
-                        jQuery(document).ready(function($) {
-
-                            var ocTesti = $("#oc-testi");
-
-                            ocTesti.owlCarousel({
-                                margin: 10,
-                                autoplay: true,
-                                loop: true,
-                                nav: true,
-                                autoplayHoverPause: false,
-                                navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
-                                dots: true,
-                                responsive:{
-                                    0:{ items:1 },
-                                    768:{ items:2 },
-                                    992:{ items:3 }
-                                }
-                            });
-
-                        });
-
-                    </script>
-
-                </div>
-
-                <div class="container clearfix" style="margin-top:40px;" >
-
-                    <div class="toggle">
-                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">Click here to see who is coming</h3></div>
+                            <h2 style="margin-top:100px;">Register</h2>
+                            <span>Click below to register</span>
+                            <%= link_to "Register Now", new_user_registration_path, :class => "button button-desc button-3d button-rounded button-green center" %>
                             
-                            <div class="togglec">
-                                <% @users.each do |user| %>
-                                    <% if user.provider == "facebook" %>
-                                            <div class="testi-image"><a href="#" data-toggle="tooltip" data-placement="top" data-original-title="<%= user.name %>"><%= image_tag(user.image) %></a></div>
-                                    <% end %>
-                                <% end %>
-
-                            </div>
                         </div>
+
 
                 </div>
             </div>
+        </div>
+    </section>
+<% end %>
+
+
+<!-- Register End -->
+
+<!-- Social Start -->
+<section id="#" style="margin:0px;">
             <!-- Instagram Feed Start -->
-                            <div class="section nobottommargin">
+                            <div class="section nobottommargin" style="margin:0px;">
                                 <div class="container clearfix">
                                     <div class="heading-block center nobottommargin nobottomborder">
                                         <h3>Check out the gram</h3>
@@ -387,28 +411,5 @@
 
 <!-- Social End -->
 
- 
 
-<!-- Register Start -->
-<% if !user_signed_in? %>
-    <section id="register">
-        <div class="section nomargin noborder bgcolor dark" style="padding: 20px 0;">
-            <div class="container clearfix">
-                <div class="content-wrap" style="padding-top:10px;">
-                    <div class="heading-block center">
-                            <h2>Register</h2>
-                            <span></span>
-                            <%= link_to "Register Now", new_user_registration_path, :class => "button button-desc button-3d button-rounded button-green center" %>
-                            
-                        </div>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
-<% end %>
-
-
-<!-- Register End -->
 
