@@ -65,8 +65,14 @@
                               <tr>
                                 <td>Bus</td>
                                 <td><%= @comment.bus %>
-                                    <% if @comment.bus == "Yes" %>
-                                  <br><a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank" />PAY BY VENMO NOW</a>
+                                    <% if @comment.bus == "Yes" %><br>
+                                    <% if @comment.payment == "Not Paid" %>
+                                    <br><a class="btn btn-sm btn-danger" href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank" />PAY BY VENMO NOW</a>
+                                    <% else %>
+                                    <a class="btn btn-sm btn-success">Paid</a>
+                                    <% end %>
+                                  
+                                  
                                   <% end %>
 
                                 </td>
