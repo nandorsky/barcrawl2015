@@ -7,7 +7,7 @@
 
         <div class="container clearfix">
 
-          <% if Comment.exists?(:user_id => current_user.id) && current_user.mvp == 2 %>
+          <% if Comment.exists?(:user_id => current_user.id) %>
   
                   <h3>You are already registered for #pgtimemachine. What would you like to do now?</h3>
                   <h2><%= link_to "Go to the homepage", root_path %></h2>
