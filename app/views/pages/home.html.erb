@@ -223,7 +223,10 @@
                             <div class="toggle">
                                 <% @users.each do |user| %>
                                     <% if user.provider == "facebook" %>
-                                            <div class="testi-image"><a href="#" data-toggle="tooltip" data-placement="top" data-original-title="<%= user.name %>"><%= image_tag(user.image) %></a></div>
+                                            <div class="testi-image"><a href="#" data-toggle="tooltip" data-placement="top" data-original-title="<%= user.name %>">
+                                                <%= image_tag(user.image) %><br>
+                                                <%= user.name %></a>
+                                            </div>
                                     <% end %>
                                 <% end %>
 
