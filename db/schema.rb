@@ -13,15 +13,20 @@
 
 ActiveRecord::Schema.define(version: 20150414230321) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.string   "comment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "bus"
     t.string   "mvp"
     t.string   "payment"
   end
+
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -43,8 +48,8 @@ ActiveRecord::Schema.define(version: 20150414230321) do
     t.integer  "mvp"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "votes", force: :cascade do |t|
     t.integer  "mvp_id"
@@ -54,6 +59,6 @@ ActiveRecord::Schema.define(version: 20150414230321) do
     t.integer  "vote"
   end
 
-  add_index "votes", ["vote"], name: "index_votes_on_vote"
+  add_index "votes", ["vote"], name: "index_votes_on_vote", using: :btree
 
 end
