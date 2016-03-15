@@ -9171,8 +9171,8 @@ body:not(.device-touch) .clients-grid li a {
 .testi-image img,
 .testi-image i {
 	display: block;
-	width: 64px;
-	height: 64px;
+	width: 100px;
+	height: 100px;
 }
 
 .testi-image i {
