@@ -232,7 +232,7 @@
                             <div class="toggle">
                                 <% @users.each do |user| %>
                                     <% if user.provider == "facebook" %>
-                                            <div class="testi-image">
+                                            <div class="test-image col-md-3">
                                                 <%= image_tag(user.image) %><br>
                                                 <span style="font-size:12px;"><%= user.name %></span>
                                             </div>
@@ -285,7 +285,7 @@
                                 responsive:{
                                     0:{ items:1 },
                                     768:{ items:1 },
-                                    992:{ items:1 }
+                                    992:{ items:2 }
                                 }
                             });
 
