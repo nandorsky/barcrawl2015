@@ -230,19 +230,20 @@
                            <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">SOME OF THE <%= @users.count %> PEOPLE ATTENDING</h3></div>
                             
                             <div class="toggle">
-                                <% @users.each do |user| %>
-                                    <% if user.provider == "facebook" %>
-                                            <div class="testi-image col-md-1" style="text-align:center;">
-                                                <%= image_tag(user.image, :style => "border-radius:100px;") %><br>
-                                                <span style="font-size:12px;"><%= user.name %></span>
+                                 <div class="row">
+                                    <% @users.each do |user| %>
+                                        <% if user.provider == "facebook" %>
+                                            <div class="col-md-2">
+                                              <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="40" height="40">
+                                              <p><%= user.name %></p>
                                             </div>
+                                         <% end %>
                                     <% end %>
-                                <% end %>
+                                </div>
 
                             </div>
                         </div>
-
-                </div>
+                    
 
                 <div class="container clearfix">
                     <div id="oc-testi" class="owl-carousel testimonials-carousel">
