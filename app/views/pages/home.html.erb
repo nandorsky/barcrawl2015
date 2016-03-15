@@ -1,13 +1,13 @@
 <!-- Parallax Start -->
    <section id="slider" class="full-screen dark" style="overflow: hidden; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<%= asset_path 'parallax/home2.jpg' %>') no-repeat center center ;background-size: cover; ">
 
-            <div class="container clearfix vertical-middle" style="z-index: 3;">
+            <div class="container clearfix vertical-middle" style="z-index:6;">
 
-                <div class="heading-block title-center nobottomborder">
-                    <h1 style="font-size:62px; color:white;" data-animate="fadeInDown" data-delay="600" >2016 PG Time Machine: <br>The Last Waltz</h1>
+                <div class="heading-block title-center nobottomborder" style="padding-top:12%;">
+                    <h1 style="font-size:42px; color:white;" data-animate="fadeInDown" data-delay="200" >2016 PG Time Machine: <br>The Last Waltz</h1>
                 </div>
 
-                <div id="countdown-ex1" class="countdown countdown-large coming-soon divcenter bottommargin" style="max-width:700px; color:white;" data-animate="fadeInDown" data-delay="1900"></div>
+                <div id="countdown-ex1" class="countdown countdown-large coming-soon divcenter bottommargin" style="max-width:700px; color:white;" data-animate="fadeInDown" data-delay="400"></div>
 
                 <script>
                     jQuery(document).ready( function($){
@@ -16,7 +16,7 @@
                     });
                 </script>
 
-                <div class="center topmargin-lg">
+                <div class="center topmargin-lg" style="padding-bottom:10%;">
 
                     <a href="<%= root_path %>#intro" class="button button-desc button-3d button-rounded button-green center button-xlarge" >I WANT IN</a>
 
@@ -232,9 +232,9 @@
                             <div class="toggle">
                                 <% @users.each do |user| %>
                                     <% if user.provider == "facebook" %>
-                                            <div class="testi-image"><a href="#" data-toggle="tooltip" data-placement="top" data-original-title="<%= user.name %>">
+                                            <div class="testi-image">
                                                 <%= image_tag(user.image) %><br>
-                                                <%= user.name %></a>
+                                                <span style="font-size:12px;"><%= user.name %></span>
                                             </div>
                                     <% end %>
                                 <% end %>
@@ -284,8 +284,8 @@
                                 dots: true,
                                 responsive:{
                                     0:{ items:1 },
-                                    768:{ items:2 },
-                                    992:{ items:3 }
+                                    768:{ items:1 },
+                                    992:{ items:1 }
                                 }
                             });
 
