@@ -232,7 +232,7 @@
                             <div class="toggle">
                                 <% @users.each do |user| %>
                                     <% if user.provider == "facebook" %>
-                                            <div class="testi-image col-sm-1" style="text-align:center;">
+                                            <div class="testi-image col-md-1" style="text-align:center;">
                                                 <%= image_tag(user.image, :style => "border-radius:100px;") %><br>
                                                 <span style="font-size:12px;"><%= user.name %></span>
                                             </div>
