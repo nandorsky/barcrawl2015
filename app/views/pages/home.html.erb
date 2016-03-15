@@ -233,8 +233,8 @@
                                  <div class="row">
                                     <% @users.each do |user| %>
                                         <% if user.provider == "facebook" %>
-                                            <div class="col-md-2">
-                                              <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="40" height="40">
+                                            <div class="col-md-2" style="text-align:center;">
+                                              <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="80" height="80">
                                               <p><%= user.name %></p>
                                             </div>
                                          <% end %>
