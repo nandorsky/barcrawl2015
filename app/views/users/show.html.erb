@@ -29,7 +29,7 @@
 
                 <div class="container clearfix">
                   <div class="heading-block title-center nobottomborder">
-                    <h2>2015 PG Time Machine Countdown</h2>
+                    <h2>2016 PG Time Machine Countdown</h2>
                 </div>
 
                   <div id="countdown-ex1" class="countdown countdown-large coming-soon divcenter bottommargin" style="max-width:700px;"></div>
@@ -65,17 +65,15 @@
                               </tr>
                               <tr>
                                 <td>Bus</td>
-                                <td><%= @comment.bus %>
+                                <td>Since you will be riding the bus, to pay via venmo <a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank">click here</a><br>
                                     <% if @comment.bus == "Yes" %><br>
                                     <% if @comment.payment == "Not Paid" %>
-                                    
+
+                                    <a class="btn btn-sm btn-danger">Not Paid</a>
                                     <% else %>
                                     <a class="btn btn-sm btn-success">Paid</a>
                                     <% end %>
-                                  
-                                  
                                   <% end %>
-
                                 </td>
                               </tr>
                           <% if current_user.provider == "facebook" %>    
@@ -169,7 +167,7 @@
                     <!-- Post Content
                     ============================================= -->
                     
-                        <h4>PG Time Machine 2015 Roster</h4>
+                        <h4>PG Time Machine 2016 Roster</h4>
                         <table class="table table-striped">
                           <thead>
                             <tr>
