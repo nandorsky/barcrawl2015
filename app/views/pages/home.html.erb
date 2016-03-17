@@ -11,7 +11,7 @@
 
                 <script>
                     jQuery(document).ready( function($){
-                        var newDate = new Date(2016, 4, 30);
+                        var newDate = new Date(2016, 3, 30);
                         $('#countdown-ex1').countdown({until: newDate});
                     });
                 </script>
@@ -227,14 +227,14 @@
             <div class="container clearfix" style="margin-bottom:80px;" >
 
                     <div class="toggle">
-                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">SOME OF THE <%= @users.count %> PEOPLE ATTENDING</h3></div>
+                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">A FEW OF THE <%= @users.count %> PEOPLE ATTENDING</h3></div>
                             
                             <div class="toggle">
                                  <div class="row">
                                     <% @users.each do |user| %>
                                         <% if user.provider == "facebook" %>
-                                            <div class="col-md-2" style="text-align:center;">
-                                              <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="80" height="80">
+                                            <div class="col-SM-2" style="text-align:center;">
+                                              <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="100%" >
                                               <p><%= user.name %></p>
                                             </div>
                                          <% end %>
