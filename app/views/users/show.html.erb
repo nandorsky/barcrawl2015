@@ -21,7 +21,7 @@
                 <strong><%= content_tag(:div, msg) %></strong> 
                 
                 <% if @comment.bus == "Yes" %>
-                Since you will be riding the bus, to pay via venmo <a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank">click here</a>.
+                Since you will be riding the bus, to pay via venmo <a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=10.00&note=PGTM-Bus&" target="_blank">click here</a>.
                 <% end %>
               </div>
             </div>
@@ -65,14 +65,16 @@
                               </tr>
                               <tr>
                                 <td>Bus</td>
-                                <td>Since you will be riding the bus, to pay via venmo <a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=25.00&note=PGTM-Bus&" target="_blank">click here</a><br>
-                                    <% if @comment.bus == "Yes" %><br>
+                                <td>
+                                  <% if @comment.bus == "Yes" %><br>
                                     <% if @comment.payment == "Not Paid" %>
-
+                                      Since you will be riding the bus, to pay via venmo <a href="https://venmo.com/?txn=pay&recipients=Kevin-Meehan-1&amount=10.00&note=PGTM-Bus&" target="_blank">click here</a><br>
                                     <a class="btn btn-sm btn-danger">Not Paid</a>
                                     <% else %>
                                     <a class="btn btn-sm btn-success">Paid</a>
                                     <% end %>
+                                  <% else %>
+                                    Not riding the bus
                                   <% end %>
                                 </td>
                               </tr>
