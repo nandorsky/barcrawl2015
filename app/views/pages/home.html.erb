@@ -134,11 +134,21 @@
                                         <li style="color:white;"><i class="icon-map-marker2"></i> 3100 K Street NW, Washington, DC 20007</li>
                                         <!--<li style="color:white;"><i class="icon-beer"></i> $14 Bud Lite Pitchers, $5 Fireball</li>-->
                                     </ul>
+                                    <div class="entry-content">
                                     <ul class="entry-meta clearfix">
-                                        <li style="color:white;"><i class="icon-time"></i>3:00 PM - 3:30 PM - Pick Up Wristband</li>
-                                        <li style="color:white;"><i class="icon-time"></i>3:15 PM - 3:30 PM - Boarding</li>
-                                        <li style="color:white;"><i class="icon-time"></i>3:00 PM - 3:31 PM - Ship Departs</li>
+                                        <li style="color:white;"><i class="icon-time"></i>3:00 PM - 3:30 PM - Pick Up Wristband</li>  
                                     </ul>
+                                    </div>
+                                    <div class="entry-content">
+                                     <ul class="entry-meta clearfix">                                      
+                                        <li style="color:white;"><i class="icon-time"></i>3:15 PM - 3:30 PM - Boarding</li>
+                                    </ul>
+                                    </div>
+                                    <div class="entry-content">
+                                        <ul class="entry-meta clearfix">                                      
+                                        <li style="color:white;"><i class="icon-time"></i>3:00 PM - 3:31 PM - Ship  Departs</li>
+                                        </ul>
+                                    </div>
                                     <div class="entry-content">
                                         <p>You people are animals. We sold out the 143 person boat 2 months before the bar crawl. Our journey begins here. For the die-hards, the veterans and the bold, we begin Saturday's activities on the Potomac aboard the USS Degenerate which will be equipped with a full open bar. If this is our last PGTM, we're going to go all out. BOAT LEAVES AT 3:30PM WITH OR WITHOUT YOU, RAIN OR SHINE.</p>
                                     </div>
@@ -234,7 +244,7 @@
                                  <div class="row">
                                     <% @users.each do |user| %>
                                         <% if user.provider == "facebook" %>
-                                            <div class="col-sm-2" style="text-align:center; pading-left:0xp;">
+                                            <div class="col-sm-2" style="text-align:center; min-height:200px;">
                                               <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="80" height="80">
                                               <p><%= user.name %></p>
                                             </div>
