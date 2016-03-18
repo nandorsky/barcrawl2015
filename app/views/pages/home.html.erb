@@ -235,28 +235,7 @@
 <section id="social" style="margin:0px;">
 
         <div class="section" style="background-color:white;">
-            <div class="container clearfix" style="margin-bottom:80px;" >
-
-                    <div class="toggle">
-                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">A FEW OF THE <%= @users.count %> PEOPLE ATTENDING</h3></div>
-                            
-                            <div class="toggle">
-                                 <div class="row">
-                                    <% @users.each do |user| %>
-                                        <% if user.provider == "facebook" %>
-                                            <div class="col-sm-2" style="text-align:center; min-height:160px;">
-                                              <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="80" height="80">
-                                              <p><%= user.name %></p>
-                                            </div>
-                                         <% end %>
-                                    <% end %>
-                                </div>
-
-                            </div>
-                        </div>
-                    
-
-                <div class="container clearfix">
+            <div class="container clearfix">
                     <div id="oc-testi" class="owl-carousel testimonials-carousel">
 
                         <% @comments.each do |comment| %>
@@ -306,6 +285,26 @@
                     </script>
 
                 </div>
+                
+            <div class="container clearfix" style="margin-bottom:80px;" >
+
+                    <div class="toggle">
+                           <div class="togglet"><!--<i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>--><h3 class="center">A FEW OF THE <%= @users.count %> PEOPLE ATTENDING</h3></div>
+                            
+                            <div class="toggle">
+                                 <div class="row">
+                                    <% @users.each do |user| %>
+                                        <% if user.provider == "facebook" %>
+                                            <div class="col-sm-2" style="text-align:center; min-height:160px;">
+                                              <img class="img-circle" src="<%= user.image %>" alt="Generic placeholder image" width="80" height="80">
+                                              <p><%= user.name %></p>
+                                            </div>
+                                         <% end %>
+                                    <% end %>
+                                </div>
+
+                            </div>
+                        </div>
 
             </div>
 </section>
